@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <img src = "pics/portfolio-logo-png-3.png" class = "logo">
+                <img src="pics/portfolio-logo-png-3.png" class="logo">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Achievements</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#"><b>Home</b></a></li>
+                    <li><a href="#"><b>About</b></a></li>
+                    <!--<li><a href="#">Achievements</a></li>-->
+                    <li><a href="#"><b>Projects</b></a></li>
+                    <li><a href="#"><b>Contact</b></a></li>
                 </ul>
             </nav>
             <div class="header-text">
                 <!-- <p>Competitive Programmer</p> -->
                 <p>
                     <b>
-                        <i>Hi, I'm  <span>Rohan Sinha</span><br>a competitive programmer and a java enthusiast
-                        </i>
+                        <i>Hi, I'm Rohan Sinha</i><br><span><mark>a competitive programmer and a Java enthusiast</mark></span>
+                        
                     </b>
                 </p>
             </div>
         </div>
-   </div> 
+    </div>
 
-<!--------------About-------------------------------------------------->
+    <!--------------About-------------------------------------------------->
 
-    <div id = "about">
+    <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                  <img src = "pics/background.jpg">
+                    <img src="pics/background.jpg">
                 </div>
                 <div class="about-col-2">
-                    <h1 class = "sub-title">About me</h1>
-                    <p>As a passionate competitive programmer, I have conquered over 800 challenging coding problems. Currently, I am immersed in mastering <b>Java</b> as my primary programming language.</p>
+                    <h1 class="sub-title">About me</h1>
+                    <p>As a passionate competitive programmer, I have conquered over 800 challenging coding problems.
+                        Currently, I am immersed in mastering <b>Java</b> as my primary programming language.</p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links"></p>              <!----Add projects here-->                
-                    </div> 
-                   
-                    <!----Skills--> 
-                   
-                    <div class="tab-contents">                  
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <!--<p class="tab-links" onclick="opentab('Skills')"></p>--> <!----Add projects here-->
+                    </div>
+
+                    <!----Skills-->
+
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Problem Solving</span><br>Solving various Data structure and Algorithm based problems
-                            in various online judges</li>
+                            <li><span>Problem Solving</span><br>Solving various Data structure and Algorithm based
+                                problems
+                                in various online judges</li>
                             <li><span>Java</span><br>Solving various Data structure and Algorithm based problems
                                 and building projects with Java</li>
                             <li><span>Languages</span><br>C, C++, Java, HTML, CSS</li>
@@ -61,19 +65,22 @@
                     </div>
 
 
-                    <!----Experiences----> 
+                    <!----Experiences---->
 
 
-                    <div class="tab-contents active-tab">
+                    <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>ICPC Preliminary Programming Contest 2021 Team Contest</span><br>Participated in International Collegiate Programming Contest (ICPC) Preliminary round and    secured  371 position among 1700+ teams</li>
-                            <li><span>Online Programming Contest</span><br>Best rank in codechef (Individual) : Global(353), Country(10), University(01)</li>
+                            <li><span>ICPC Preliminary Programming Contest 2021 Team Contest</span><br>Participated in
+                                International Collegiate Programming Contest (ICPC) Preliminary round and secured 371
+                                position among 1700+ teams</li>
+                            <li><span>Online Programming Contest</span><br>Best rank in codechef (Individual) :
+                                Global(353), Country(10), University(01)</li>
                             <li><span>Problem Setter in programming Contest</span><br>
                                 Experience as a problem setter in ICE 7th batch farewell Programming Contest, NSTU </li>
                         </ul>
                     </div>
 
-                    <!---Projects---> 
+                    <!---Projects--->
 
 
                     <!-- <div class="tab-contents">
@@ -91,5 +98,40 @@
             </div>
         </div>
     </div>
+
+    <!---------------services-------------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">Projects</h1>
+            <div class="services-list">
+                <div>
+                    <h1>Portfolio</h1>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------Js------------------->
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link"); 
+            document.getElementById(tabname).classList.add("active-tab"); 
+        }
+
+    </script>
+
 </body>
+
 </html>
