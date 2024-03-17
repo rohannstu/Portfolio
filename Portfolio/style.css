@@ -164,6 +164,7 @@ mark {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     grid-gap: 40px; 
     margin-top: 50px;   
+    margin-bottom: 5%;
 }
 .services-list div{
     background: rgb(27, 94, 121); 
@@ -192,7 +193,14 @@ mark {
 /* ------------Contact-----------*/
 
 .contact-left{
-    flex-basis: 35%; 
+    flex-basis: 35%;    
+}
+.container{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.contact-left h1{
+   margin-bottom: 5%; 
 }
 .contact-right{
     flex-basis: 60%;
@@ -211,4 +219,38 @@ mark {
     margin-right: 15px;
     color: #ababab; 
     display: inline block;
+    transition: background 0.5s, transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f; 
+    transform: translateY(-10px);
+}
+
+/* <!-------------button/.btn / Resume-------------> */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a30e6a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #800e54;
+}
+.contact-right form{
+    width: 90%; 
+}
+form input, form textarea{
+    width: 100%; 
+    border: 0; 
+    outline: none; 
+    background: #262626; 
+    padding: 15px; 
+    margin: 15px 0; 
+    color: #fff; 
+    font-size: 18px; 
+    border-radius: 6px; 
 }
