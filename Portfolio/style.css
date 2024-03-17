@@ -16,7 +16,7 @@ body{
     background-position: center; 
 }
 .logo {
-    width: 170px;
+    width: 150px;
     height: auto;
     object-fit: contain;
     margin-right: 10px;
@@ -253,4 +253,21 @@ form input, form textarea{
     color: #fff; 
     font-size: 18px; 
     border-radius: 6px; 
+}
+form .btn{
+    padding: 14px 60px; 
+    font-size: 18px; 
+    margin-top: 20px; 
+    cursor: pointer;  
+}
+
+/*-----copyrigtht---*/
+
+.copyright{
+    width: 100%; 
+    text-align: center;
+    padding: 25px 0; 
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
 }
