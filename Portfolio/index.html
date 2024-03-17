@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 
 <body>
@@ -24,10 +26,16 @@
             <div class="header-text">
                 <!-- <p>Competitive Programmer</p> -->
                 <p>
-                    <b>
-                        <i>Hi, I'm Rohan Sinha</i><br><span><mark>a competitive programmer and a Java enthusiast</mark></span>
-                        
-                    </b>
+                <p>
+                    <i><b>Hi, I'm Rohan Sinha , </b></i><br><span><mark><b>a Competitive programmer and a Java
+                                Enthusiast</b></mark></span>
+                </p>
+                <p><mark><i>As a passionate Competitive Programmer, <br> I have conquered over 800 challenging coding
+                            problems.
+                            <br> Currently, I am immersed
+                            in mastering <b>Java</b> as my primary programming language</i></mark>.</p>
+
+
                 </p>
             </div>
         </div>
@@ -43,12 +51,11 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About me</h1>
-                    <p>As a passionate competitive programmer, I have conquered over 800 challenging coding problems.
-                        Currently, I am immersed in mastering <b>Java</b> as my primary programming language.</p>
+                    <p>To learn more about my skills and experiences, please refer to the following options</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <!--<p class="tab-links" onclick="opentab('Skills')"></p>--> <!----Add projects here-->
+                        <p class="tab-links" onclick="opentab('education')">Education</p> <!----Add projects here-->
                     </div>
 
                     <!----Skills-->
@@ -80,6 +87,15 @@
                         </ul>
                     </div>
 
+                    <!------------Education----------------->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>Pursing my BSc.(Bachelor of Science) in Information and Communication
+                                Engineering at Noakhali Science and Technolgy University
+                            </li>
+                        </ul>
+                    </div>
+
                     <!---Projects--->
 
 
@@ -99,21 +115,82 @@
         </div>
     </div>
 
-    <!---------------services-------------->
+    <!---------------services/projects-------------->
 
     <div id="services">
         <div class="container">
-            <h1 class="subtitle">Projects</h1>
+            <h1 class="sub-title" align="center">Projects</h1>
             <div class="services-list">
                 <div>
                     <h1>Portfolio</h1>
-                    <a href="#">learn more</a>
+                    <p>"Hello! My portfolio is a curated collection that highlights my expertise and accomplishments in
+                        [insert field/industry]. It features a diverse range of projects that demonstrate my skills in
+                        [specific skills/areas]. Organized thoughtfully, you'll find everything from [mention a few
+                        types of projects] to showcase my capabilities. I invite you to explore further to get a
+                        comprehensive view
+                        of my work and potential contributions."</p>
+                    <a href="#"><b>
+                            <h3>Learn more</h3>
+                        </b></a>
+                </div>
+                <div>
+                    <h1>Portfolio</h1>
+                    p>"Hello! My portfolio is a curated collection that highlights my expertise and accomplishments in
+                    [insert field/industry]. It features a diverse range of projects that demonstrate my skills in
+                    [specific skills/areas]. Organized thoughtfully, you'll find everything from [mention a few types of
+                    projects] to showcase my capabilities. I invite you to explore further to get a comprehensive view
+                    of my work and potential contributions."</p>
+                    <a href="#"><b>
+                            <h3>Learn more</h3>
+                        </b></a>
+                </div>
+                <div>
+                    <h1>Portfolio</h1>
+                    <p>"Hello! My portfolio is a curated collection that highlights my expertise and accomplishments in
+                        [insert field/industry]. It features a diverse range of projects that demonstrate my skills in
+                        [specific skills/areas]. Organized thoughtfully, you'll find everything from [mention a few
+                        types of projects] to showcase my capabilities. I invite you to explore further to get a
+                        comprehensive view
+                        of my work and potential contributions."</p>
+                    <a href="#"><b>
+                            <h3>Learn more</h3>
+                        </b></a>
                 </div>
             </div>
         </div>
     </div>
+    
+<!-----------------------Contact----------------------------------------------->
 
-    <!----------------Js------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+              <h1 class = "subtitle">Contact Me</h1>
+              <p><i class="fas fa-paper-plane"></i> rohansinha141635@gmail.com</p>
+              
+             <!-------icons------------>
+                    <div class="social-icons">
+                        <a href="https://twitter.com/rohan141635"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100045608820844"><i class="fab fa-facebook"></i></a>
+                        
+                    </div>
+                    <!------------icons---------------->
+
+            </div>
+            <!------------form----------------->
+            <div class="contact-right">
+               <form>
+                <input type = "text" name = "Name" placeholder="Your Name" required>
+                <input type = "email" name = "email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type = "submit">Send</button>    
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------Js------------------->
     <script>
 
         var tablinks = document.getElementsByClassName("tab-links");
@@ -126,8 +203,8 @@
             for (tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab");
             }
-            event.currentTarget.classList.add("active-link"); 
-            document.getElementById(tabname).classList.add("active-tab"); 
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
 
     </script>

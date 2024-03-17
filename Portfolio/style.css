@@ -2,7 +2,7 @@
     margin: 0; 
     padding: 0; 
     font-family: 'Poppins', sans-serif; 
-    box-sizing; border-box; 
+    box-sizing: border-box; 
 }
 body{
     background-color: rgb(7, 0, 0);; 
@@ -57,13 +57,20 @@ nav ul li a:hover::after{
 }
 
 .header-text p{
-    font-size: 40px; 
+    font-size: 30px; 
     margin-top: 20px; 
     margin-left: 20px; 
 }
-.header-text p  mark{
-    color: #010101; 
+.header-text p{
+    color: #f5e4e4; 
 }
+.header-text p mark{
+    color: #141414; 
+}
+mark {
+    background-color: rgba(187, 195, 196, 0.5); /* Adjust the last value (0.5) to change the opacity */
+}
+
 
 /*--------------about-------------------*/
 
@@ -93,7 +100,7 @@ nav ul li a:hover::after{
 }
 .about-col-2 p{
     margin-bottom: 5%; 
-    flex-basis: 60%;
+    flex-basis: 10%;
 }
 
 .sub-title {
@@ -128,7 +135,7 @@ nav ul li a:hover::after{
 }
 
 .tab-links.active-link::after {
-    width: 50%;
+    width: 100%;
 }
 
 .tab-contents ul li {
@@ -149,7 +156,7 @@ nav ul li a:hover::after{
     display: block;
 }
 /*----------services----------*/
-.services{
+#services{
     padding: 30px 0; 
 }
 .services-list{
@@ -158,4 +165,50 @@ nav ul li a:hover::after{
     grid-gap: 40px; 
     margin-top: 50px;   
 }
- 
+.services-list div{
+    background: rgb(27, 94, 121); 
+    padding: 40px; 
+    font-size: 13px; 
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div h1{
+ font-size: 39px;
+ font-weight: 500;
+ margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #f5e4f5; 
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline block; 
+}
+.services-list div:hover{
+    background: rgb(182, 26, 52); 
+    transform: translateY(-10px); 
+}
+/* ------------Contact-----------*/
+
+.contact-left{
+    flex-basis: 35%; 
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p i{
+    color:rgb(182, 26, 52); 
+    margin-right: 15px;; 
+    font-size: 25px; 
+}
+.social-icons{
+    margin-top: 30px; 
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab; 
+    display: inline block;
+}
