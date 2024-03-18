@@ -16,11 +16,11 @@
             <nav>
                 <img src="pics/portfolio-logo-png-3.png" class="logo">
                 <ul>
-                    <li><a href="#"><b>Home</b></a></li>
-                    <li><a href="#"><b>About</b></a></li>
+                    <li><a href="#header"><b>Home</b></a></li>
+                    <li><a href="#about"><b>About</b></a></li>
                     <!--<li><a href="#">Achievements</a></li>-->
-                    <li><a href="#"><b>Projects</b></a></li>
-                    <li><a href="#"><b>Contact</b></a></li>
+                    <li><a href="#services"><b>Projects</b></a></li>
+                    <li><a href="#contact"><b>Contact</b></a></li>
                 </ul>
             </nav>
             <div class="header-text">
@@ -123,7 +123,8 @@
             <div class="services-list">
                 <div>
                     <h1>Portfolio</h1>
-                    <p>This curated collection showcases my expertise and achievements. I've utilized HTML, CSS, and JavaScript to craft this presentation of my work</p>
+                    <p>This curated collection showcases my expertise and achievements. I've utilized <b>HTML, CSS, and
+                            JavaScript</b> to craft this presentation of my work</p>
                     <a href="https://github.com/rohannstu/Portfolio.git"><b>
                             <h3>Project link</h3>
                         </b></a>
@@ -154,46 +155,49 @@
             </div>
         </div>
     </div>
-    
-<!-----------------------Contact----------------------------------------------->
 
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-              <h1 class = "subtitle">Contact Me</h1>
-              <p><i class="fas fa-paper-plane"></i> rohansinha141635@gmail.com </p>
-              
-             <!-------icons------------>
+    <!-----------------------Contact----------------------------------------------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> rohansinha141635@gmail.com </p>
+
+                    <!-------icons------------>
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/in/rohan-sinha-29979720a/"><i class="fab fa-linkedin"></i></a>
                         <a href="https://twitter.com/rohan141635"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=100045608820844"><i class="fab fa-facebook"></i></a>
-                        
+                        <a href="https://www.facebook.com/profile.php?id=100045608820844"><i
+                                class="fab fa-facebook"></i></a>
+
                     </div>
                     <!------------icons---------------->
                     <!------------download button--------------->
 
                     <a href="link-to-resume-file.pdf" class="btn">Download Resume</a>
 
-           
-        </div>
 
-            <!------------form----------------->
-            <div class="contact-right">
-               <form>   
-                <input type = "text" name = "Name" placeholder="Your Name" required>
-                <input type = "email" name = "email" placeholder="Your Email" required>
-                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                <button type = "submit" class = "btn">Send</button>    
-            </form>
-            
+                </div>
+
+                <!------------form----------------->
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Send</button>
+                    </form>
+
+                    <span id = "msg"></span>
+
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!----------------Js------------------->
+    <!----------------Js------------------->
     <script>
 
         var tablinks = document.getElementsByClassName("tab-links");
@@ -212,12 +216,31 @@
 
     </script>
 
-<footer>
-    <div class="copyright">
-        <p>&copy; 2024 Made by Rohan Sinha.</p>
-    </div>
-    
-</footer>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxf2WCmUXdzm-giOsZ9iOzh2aJo3E5AU22ucQoeNDanfEsvri3figlQmjUQqHFRmdvQmg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementByID("msg")
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message Sent Successfully"; 
+                    setTimeout(function(){
+                        msg.innerHTML = ""; 
+                    }, 5000)
+                    form.reset(); 
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2024 Made by Rohan Sinha.</p>
+        </div>
+
+    </footer>
 
 </body>
 
